@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Fast Track™ Guided Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0A0A0A;
+            --cream: #F8F6F0;
+            --accent: #8B6F47;
+            --white: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .sparkle-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+        
+        /* Image placeholder */
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(139, 111, 71, 0.15) 100%);
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .placeholder-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--gold);
+            z-index: 1;
+            position: relative;
+        }
+        
+        .price-headline {
+            text-align: center;
+            margin-bottom: 48px;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        
+        .price-headline h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--cream) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .price-tag {
+            font-size: 18px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        
+        .main-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .main-promise {
+            font-size: 22px;
+            line-height: 1.6;
+            color: var(--cream);
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease 1s both;
+        }
+        
+        .section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        
+        .bullets {
+            list-style: none;
+            margin-bottom: 48px;
+        }
+        
+        .bullets li {
+            padding: 20px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 17px;
+            line-height: 1.7;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .bullets li:last-child {
+            border-bottom: none;
+        }
+        
+        .bullets li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .bullets li strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .delivery-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(139, 111, 71, 0.08) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 40px 32px;
+            margin-bottom: 60px;
+        }
+        
+        .delivery-section h2 {
+            margin-bottom: 24px;
+        }
+        
+        .delivery-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .delivery-section p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .final-transformation {
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.6;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 60px;
+            padding: 32px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(139, 111, 71, 0.1) 100%);
+            border-radius: 8px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 60px 0;
+        }
+        
+        /* ORDER FORM */
+        .order-form {
+            background: rgba(212, 175, 55, 0.05);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 48px 40px;
+            margin-bottom: 60px;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+        
+        .form-header .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        
+        .form-header .subtitle {
+            font-size: 16px;
+            color: var(--accent);
+        }
+        
+        .order-bump {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(139, 111, 71, 0.15) 100%);
+            border: 2px dashed var(--gold);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .bump-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .order-bump h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--gold);
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+        
+        .order-bump p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .bump-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-top: 20px;
+        }
+        
+        .bump-value {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: line-through;
+            margin-right: 12px;
+        }
+        
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+        
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checkbox-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gold);
+            cursor: pointer;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: var(--gold);
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 28px 48px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+            margin-bottom: 24px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+            background: #E5C158;
+        }
+        
+        .guarantee {
+            text-align: center;
+            font-size: 14px;
+            color: var(--accent);
+            margin-top: 24px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding-top: 60px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: var(--accent);
+            font-style: italic;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .hero-image {
+                height: 300px;
+            }
+            
+            .price-headline h1 {
+                font-size: 36px;
+            }
+            
+            .main-price {
+                font-size: 48px;
+            }
+            
+            .main-promise {
+                font-size: 18px;
+            }
+            
+            .section h2 {
+                font-size: 28px;
+            }
+            
+            .bullets li {
+                font-size: 16px;
+                padding-left: 36px;
+            }
+            
+            .final-transformation {
+                font-size: 20px;
+                padding: 24px;
+            }
+            
+            .order-form {
+                padding: 32px 24px;
+            }
+            
+            .form-header h2 {
+                font-size: 32px;
+            }
+            
+            .form-header .price {
+                font-size: 44px;
+            }
+            
+            .order-bump {
+                padding: 24px;
+            }
+            
+            .order-bump h3 {
+                font-size: 24px;
+            }
+            
+            .cta-button {
+                font-size: 18px;
+                padding: 24px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sparkle-bg" id="sparkles"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">🪄</div>
+            <div class="brand-name">The Identity Magician</div>
+        </div>
+        
+        <!-- HERO IMAGE - Replace with your actual image -->
+        <div class="hero-image">
+            <span class="placeholder-text">[Your Photo or NLFT Branding Image Here]</span>
+        </div>
+        
+        <!-- PRICE HEADLINE SECTION -->
+        <div class="price-headline">
+            <h1>Become The Woman Who Has $30K Months</h1>
+            <p class="price-tag">Jump in today for only</p>
+            <div class="main-price">$888</div>
+        </div>
+        
+        <!-- MAIN PROMISE -->
+        <p class="main-promise">
+            Transform your identity in 6 weeks and watch your business catch up. 
+            Sign clients while running errands. Triple your prices and have them pay faster. 
+            Make 2026 your first quantum year, not another "a bit better" incremental upgrade.
+        </p>
+        
+        <div class="divider"></div>
+        
+        <!-- WHAT YOU'LL DISCOVER SECTION -->
+        <div class="section">
+            <h2>Here's what you'll experience inside...</h2>
+            
+            <ul class="bullets">
+                <li><strong>Crystal-clear next-level vision</strong> - Not the generic Pinterest version. Your REAL next-level income, clients, and standards. So you stop aiming in 17 directions and get the clarity and conviction that this actually IS achievable.</li>
+                
+                <li><strong>Release what's screwing your momentum</strong> - The doubts, emotional whiplash, and entrepreneurial fears that make you second-guess, convince, prove, and self-sabotage. Learn how to let that shit go, FAST.</li>
+                
+                <li><strong>Step into HER now</strong> - Stop tiptoeing and start feeling, moving, speaking, and taking action like the woman who's already at that next level. Not one day. Not some day. NOW. Your energy shifts. Your decisions shift. That new level becomes palpable.</li>
+                
+                <li><strong>Raise your client bar</strong> - Stop attracting the "almosts," the flakers, the "maybe laters" and start calling in people who are READY, excited, and already sold.</li>
+                
+                <li><strong>Upgrade your money standards</strong> - Become the woman who can attract and HOLD more money than ever before, on a consistent basis. Without self-sabotaging or leaking. Feel it in your nervous system AND your Stripe account.</li>
+                
+                <li><strong>Make it all click</strong> - Your content. Your message. Your pricing. Your presence. You stop trying to stand out and yet, finally, you DO. Because suddenly, there's no one else like you in the room.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- HOW IT WORKS SECTION -->
+        <div class="delivery-section">
+            <h2>Here's how it works...</h2>
+            
+            <p><strong>Think of this as your 6-week identity upgrade.</strong> This is the complete Next Level Fast Track™ transformation delivered in a powerful, guided but self-led format.</p>
+            
+            <p>You get my exact identity-shifting process, including the subconscious resources to achieve it. The entire six-week next-level transformation, just for you. The same work my VIP clients pay $12K for, but without the VIP investment.</p>
+            
+            <p><strong>6 weeks of powerful conscious + subconscious curriculum</strong> delivered straight to your phone via private podcast. Listen anytime, anyplace, exactly the way you want. No Zoom calls to show up for. No group chaos. Just you, the work, and the transformation.</p>
+            
+            <p><strong>Weekly emails to keep you on track</strong> with prompts, reminders, and guidance so you actually DO the work (because we both know having access means nothing if you don't use it).</p>
+            
+            <p><strong>The exact process my private clients pay five figures for</strong>, distilled into a guided experience you can move through at your own pace.</p>
+        </div>
+        
+        <!-- FINAL TRANSFORMATION -->
+        <div class="final-transformation">
+            By the end of 6 weeks, you step into HER - your next-level self - 
+            and your business has NO CHOICE but to catch up. ALWAYS.
+        </div>
+        
+        <div class="divider"></div>
+        
+        <!-- ORDER FORM -->
+        <div class="order-form">
+            <div class="form-header">
+                <h2>Claim Your Spot</h2>
+                <div class="price">$888</div>
+                <p class="subtitle">One-time investment • Instant access • Lifetime access to materials</p>
+            </div>
+            
+            <!-- ORDER BUMP -->
+            <div class="order-bump">
+                <div class="bump-badge">⚡ Special Add-On</div>
+                
+                <h3>Add: Next Level Tailored Strategy Call</h3>
+                
+                <p>Want my eyes on YOUR specific niche, situation, and business level? Add a private 1:1 Next Level Strategy Call where I'll give you the exact instructions for how to use Next Level Fast Track™ for YOUR fastest results.</p>
+                
+                <p>This is a one-time, highly personalized session where I'll help you:</p>
+                
+                <ul class="bullets">
+                    <li>Identify your biggest next-level blocks</li>
+                    <li>Map out your specific next-level path</li>
+                    <li>Create a custom game plan for moving through NLFT tailored to YOU, your business, and niche in 2026</li>
+                </ul>
+                
+                <p>You'll walk away with total clarity and a plan that's designed specifically for YOU.</p>
+                
+                <div class="bump-price">
+                    <span class="bump-value">$699</span>
+                    <span>Just $499 today</span>
+                </div>
+                
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox" id="bump-checkbox">
+                    <label for="bump-checkbox" class="checkbox-label">✨ YES! Add the Strategy Call ($499)</label>
+                </div>
+            </div>
+            
+            <!-- REPLACE THIS HREF WITH YOUR SYSTEME.IO CHECKOUT LINK -->
+            <a href="YOUR_SYSTEME_CHECKOUT_LINK_HERE" class="cta-button">
+                Yes, I'm Ready to Become Her
+            </a>
+            
+            <p class="guarantee">🔒 Secure checkout • Start immediately • Lifetime access</p>
+        </div>
+        
+        <div class="footer">
+            <div class="signature">🪄 Kasia</div>
+            <div class="tagline">The Identity Magician</div>
+        </div>
+    </div>
+    
+    <script>
+        // Create sparkle effect
+        const sparkleContainer = document.getElementById('sparkles');
+        const sparkleCount = 30;
+        
+        for (let i = 0; i < sparkleCount; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            sparkleContainer.appendChild(sparkle);
+        }
+    </script>
+</body>
+</html>
