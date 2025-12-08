@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Next Level Fast Track™ Guided Experience - 6-week identity-shifting program for female entrepreneurs ready to make 2026 their first quantum year.">
+    <meta name="description" content="Next Level Fast Track™ Guided Experience - 6-week identity-shifting program for female entrepreneurs ready to make 2026 the year everything finally clicks.">
     <title>Next Level Fast Track™ Guided Experience | The Identity Magician</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #D4AF37;
-            --dark: #0A0A0A;
-            --cream: #F8F6F0;
-            --accent: #8B6F47;
+            --black: #000000;
+            --text: #000000;
+            --beige: #eeebe3;
+            --white: #ffffff;
+            --brown: #524a3b;
+            --yellow: #e2a714;
+            --red: #7b1b18;
+            --divider: #d4d0c7;
         }
         
         * {
@@ -20,45 +24,324 @@
             box-sizing: border-box;
         }
         
-        .cyber-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%);
-            color: var(--dark);
-            padding: 12px 0;
-            overflow: hidden;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4), 0 0 30px rgba(212, 175, 55, 0.3);
-            animation: bannerGlow 3s ease-in-out infinite;
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            background: var(--beige);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 18px;
+            font-weight: 400;
         }
         
-        @keyframes bannerGlow {
-            0%, 100% {
-                box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4), 0 0 30px rgba(212, 175, 55, 0.3);
-            }
-            50% {
-                box-shadow: 0 4px 24px rgba(212, 175, 55, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
-            }
+        /* SECTION BACKGROUNDS */
+        .section-beige {
+            background: var(--beige);
         }
         
-        .banner-content {
-            display: flex;
-            white-space: nowrap;
-            animation: scrollBanner 30s linear infinite;
+        .section-white {
+            background: var(--white);
         }
         
-        .banner-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
+        .section-brown {
+            background: var(--brown);
+            color: var(--white);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+        
+        .container-wide {
+            max-width: 100%;
+            padding: 70px 40px;
+        }
+        
+        /* HEADER STYLES */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h1.main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
             font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 0 60px;
+            font-style: normal;
+            line-height: 1.1;
+            color: var(--black);
+            margin-bottom: 4px;
+            letter-spacing: -1px;
         }
         
-        @keyframes scrollBanner {
+        h1.main-title-italic {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.2;
+            color: var(--black);
+            margin-bottom: 0;
+        }
+        
+        .title-line {
+            width: 120px;
+            height: 1px;
+            background: var(--divider);
+            margin: 20px auto 24px auto;
+        }
+        
+        .subtitle {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        /* DIVIDERS */
+        .divider {
+            width: 120px;
+            height: 1px;
+            background: var(--divider);
+            margin: 50px auto;
+        }
+        
+        /* SECTION HEADERS */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 500;
+            color: var(--red);
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+        
+        h2.black {
+            color: var(--black);
+        }
+        
+        h2 em {
+            font-style: italic;
+        }
+        
+        h2.mega {
+            font-size: 44px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--red);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        h3.module-title {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            color: var(--red);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        /* PARAGRAPHS */
+        p {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        p strong {
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        p em {
+            font-style: italic;
+        }
+        
+        .emphasis-red {
+            color: var(--red);
+            font-weight: 700;
+        }
+        
+        .emphasis-big {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        /* LISTS */
+        ul {
+            list-style: none;
+            margin: 28px 0;
+        }
+        
+        ul li {
+            padding: 14px 0;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--yellow);
+            font-weight: 700;
+        }
+        
+        /* CTA BUTTONS */
+        .cta-button {
+            display: inline-block;
+            background: var(--brown);
+            color: var(--white);
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .cta-button:hover {
+            background: var(--yellow);
+            color: var(--brown);
+            transform: translateY(-2px);
+        }
+        
+        .cta-button-yellow {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--brown);
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .cta-button-yellow:hover {
+            background: #c48a0f;
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(226, 167, 20, 0.4);
+        }
+        
+        .cta-wrapper {
+            text-align: center;
+            margin: 24px 0;
+        }
+        
+        .cta-subtext {
+            font-size: 16px;
+            color: var(--text);
+            margin-top: 12px;
+            font-style: italic;
+        }
+        
+        /* HIGHLIGHT BOXES */
+        .highlight-box {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 36px;
+            margin: 28px 0;
+        }
+        
+        .section-white .highlight-box {
+            background: var(--beige);
+        }
+        
+        /* MODULE BOXES */
+        .module-box {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 36px;
+            margin: 24px 0;
+        }
+        
+        .section-white .module-box {
+            background: var(--beige);
+        }
+        
+        /* PRICE BOX */
+        .price-box {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .section-white .price-box {
+            background: var(--beige);
+        }
+        
+        .price-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .price-note {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 24px;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonial-static {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .testimonial-static img {
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* SCROLLING TESTIMONIALS */
+        .testimonial-scroll-container {
+            overflow: hidden;
+            padding: 20px 0;
+            background: var(--white);
+        }
+        
+        .testimonial-scroll {
+            display: flex;
+            animation: scrollTestimonials 40s linear infinite;
+            gap: 30px;
+        }
+        
+        .testimonial-scroll img {
+            height: 320px;
+            width: auto;
+            flex-shrink: 0;
+            border-radius: 8px;
+        }
+        
+        @keyframes scrollTestimonials {
             0% {
                 transform: translateX(0);
             }
@@ -67,641 +350,406 @@
             }
         }
         
-        body {
-            padding-top: 48px;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--dark);
-            color: var(--cream);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        .sparkle-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            opacity: 0.3;
-            z-index: 0;
-        }
-        
-        .sparkle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: var(--gold);
-            border-radius: 50%;
-            animation: sparkle 3s infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { 
-                opacity: 0; 
-                transform: scale(0) translateY(0px); 
-            }
-            50% { 
-                opacity: 1; 
-                transform: scale(1) translateY(-10px); 
-            }
-        }
-        
-        .container {
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 60px 24px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .introducing {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--cream);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            animation: fadeIn 0.8s ease;
-        }
-        
-        .hero-image {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 48px;
-            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-        
-        h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 72px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 2px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 25%, #F8F6F0 50%, #F4E4C1 75%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 300% auto;
-            animation: fadeInUp 0.8s ease 0.3s both, luxeShimmer 4s ease-in-out infinite, breathe 3s ease-in-out infinite;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
-            position: relative;
-            letter-spacing: 0.5px;
-            padding: 0 20px;
-            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
-        }
-        
-        .subtitle-line {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 58px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 28px;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 25%, #F8F6F0 50%, #F4E4C1 75%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 300% auto;
-            animation: fadeInUp 0.8s ease 0.5s both, luxeShimmer 4s ease-in-out infinite, breathe 3s ease-in-out infinite;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
-            letter-spacing: 0.5px;
-            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
-        }
-        
-        @keyframes luxeShimmer {
-            0%, 100% {
-                background-position: 0% center;
-                filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
-            }
-            50% {
-                background-position: 100% center;
-                filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.7));
-            }
-        }
-        
-        @keyframes breathe {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-            }
-        }
-        
-        @keyframes gentleBounce {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-        
-        @keyframes shimmerText {
-            0%, 100% {
-                background-position: 0% center;
-            }
-            50% {
-                background-position: 100% center;
-            }
-        }
-        
-        .subtitle {
-            font-size: 22px;
-            line-height: 1.6;
-            text-align: center;
-            margin: 0 auto 48px auto;
-            color: var(--cream);
-            font-weight: 400;
-            animation: fadeInUp 0.8s ease 0.8s both;
-            max-width: 900px;
-            display: block;
-        }
-        
-        .section {
-            margin-bottom: 48px;
-            animation: fadeInUp 0.8s ease 1s both;
-            transition: transform 0.3s ease;
-        }
-        
-        .section:hover {
-            transform: translateY(-4px);
-        }
-        
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 24px;
-        }
-        
-        h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 44px;
-            font-weight: 700;
-            margin: 60px 0 32px 0;
-            line-height: 1.3;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% auto;
-            animation: subtleShimmer 5s ease-in-out infinite;
-            text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
-        }
-        
-        h2.addon-title {
-            font-size: 31px;
-            margin: 0 0 24px 0;
-        }
-        
-        @keyframes subtleShimmer {
-            0%, 100% {
-                background-position: 0% center;
-            }
-            50% {
-                background-position: 100% center;
-            }
-        }
-        
-        @keyframes glowPulse {
-            0%, 100% {
-                text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-            }
-            50% {
-                text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-            }
-        }
-        
-        .checkmark-list {
-            list-style: none;
-            margin: 32px 0;
-        }
-        
-        .checkmark-list li {
-            padding: 16px 0;
-            padding-left: 40px;
-            position: relative;
-            font-size: 18px;
-            line-height: 1.7;
-        }
-        
-        .checkmark-list li::before {
-            content: '–';
-            position: absolute;
-            left: 0;
-            font-size: 24px;
-            color: var(--gold);
-            font-weight: 300;
-            top: 14px;
-        }
-        
-        .wand-list {
-            list-style: none;
-            margin: 32px 0;
-        }
-        
-        .wand-list li {
-            padding: 32px 0;
-            position: relative;
-            font-size: 18px;
-            line-height: 1.8;
-            border-bottom: 1px solid rgba(244, 228, 193, 0.3);
-        }
-        
-        .wand-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(139, 111, 71, 0.08) 100%);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 8px;
-            padding: 40px 32px;
-            margin: 48px 0;
-            transition: all 0.4s ease;
-        }
-        
-        .highlight-box:hover {
-            transform: translateY(-6px);
-            border-color: rgba(212, 175, 55, 0.5);
-            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
-        }
-        
-        .highlight-box h2 {
-            margin-top: 0;
-        }
-        
-        .sparkle-list {
-            list-style: none;
-            margin: 32px 0;
-        }
-        
-        .sparkle-list li {
-            padding: 16px 0;
-            padding-left: 40px;
-            position: relative;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        
-        .sparkle-list li::before {
-            content: '–';
-            position: absolute;
-            left: 0;
-            font-size: 24px;
-            color: var(--gold);
-            font-weight: 300;
-            top: 22px;
-        }
-        
-        .price-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(139, 111, 71, 0.12) 100%);
-            border: 2px solid var(--gold);
-            border-radius: 12px;
-            padding: 48px 40px;
-            text-align: center;
-            margin: 60px 0;
-            transition: all 0.4s ease;
-        }
-        
-        .price-box:hover {
-            transform: scale(1.02);
-            border-color: #FFD700;
-            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.3);
-        }
-        
-        .price-box h2 {
-            margin-top: 0;
-            margin-bottom: 24px;
-        }
-        
-        .cyber-special {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% auto;
-            animation: subtleShimmer 5s ease-in-out infinite, float 2s ease-in-out infinite;
-            display: block;
-            text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-            letter-spacing: 1px;
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-        
-        .investment-line {
-            font-size: 18px;
-            color: var(--cream);
-            margin: 8px 0;
-            font-weight: 500;
-        }
-        
-        .final-investment {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            font-weight: 700;
-            margin: 20px 0 8px 0;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% auto;
-            animation: subtleShimmer 5s ease-in-out infinite;
-            text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
-        }
-        
-        .until-2025 {
-            font-size: 16px;
-            color: var(--accent);
-            font-style: italic;
-            margin-bottom: 32px;
-        }
-        
-        .price-amount {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 72px;
-            font-weight: 700;
-            color: var(--gold);
-            line-height: 1;
-            margin: 24px 0;
-        }
-        
-        .price-note {
-            font-size: 16px;
-            color: var(--accent);
-            margin-top: 16px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%);
-            color: var(--dark);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 24px 48px;
-            border-radius: 8px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
-            margin: 48px auto 56px auto;
-            display: block;
-            text-align: center;
-            max-width: 500px;
-            position: relative;
+        /* RESULTS TICKER */
+        .results-ticker-container {
             overflow: hidden;
-            animation: pulse 2s ease-in-out infinite;
+            background: var(--brown);
+            padding: 18px 0;
         }
         
-        .cta-button:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.7), 0 0 60px rgba(244, 228, 193, 0.6);
-            animation: none;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 100%);
+        .results-ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollTicker 25s linear infinite;
         }
         
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        .results-ticker span {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+            padding: 0 40px;
+            letter-spacing: 1px;
+        }
+        
+        .results-ticker .dot {
+            color: var(--yellow);
+        }
+        
+        @keyframes scrollTicker {
+            0% {
+                transform: translateX(0);
             }
-            50% {
-                box-shadow: 0 8px 32px rgba(212, 175, 55, 0.5);
+            100% {
+                transform: translateX(-50%);
             }
         }
         
-        .divider {
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            margin: 60px auto;
+        /* MAEVE TESTIMONIAL */
+        .testimonial-featured {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 50px 48px;
+            text-align: center;
+            margin: 50px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
+        .section-white .testimonial-featured {
+            background: var(--beige);
+        }
+        
+        .testimonial-featured img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin-bottom: 24px;
+            object-fit: cover;
+        }
+        
+        .testimonial-featured blockquote {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-featured blockquote strong {
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        .testimonial-featured .author {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--brown);
+        }
+        
+        /* VIP BOX */
+        .vip-box {
+            background: var(--white);
+            border-left: 4px solid var(--red);
+            border-radius: 4px;
+            padding: 36px;
+            margin: 40px 0;
+        }
+        
+        .section-white .vip-box {
+            background: var(--beige);
+        }
+        
+        /* FOOTER */
         .footer {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 50px;
             padding-top: 40px;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid var(--divider);
         }
         
         .signature {
+            font-family: 'Playfair Display', serif;
             font-size: 32px;
+            font-style: italic;
+            color: var(--black);
             margin-bottom: 4px;
-            background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .tagline {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: var(--brown);
+        }
+        
+        /* FAQ SECTION */
+        .faq-item {
+            margin-bottom: 28px;
+        }
+        
+        .faq-question {
+            font-family: 'Playfair Display', serif;
             font-size: 22px;
-            color: var(--gold);
-            letter-spacing: 1px;
-        }
-        
-        .ps-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(212, 175, 55, 0.15);
-        }
-        
-        .ps-section p {
-            font-size: 16px;
-            font-style: italic;
-            color: var(--accent);
-        }
-        
-        strong {
-            color: var(--gold);
             font-weight: 600;
+            color: var(--black);
+            margin-bottom: 12px;
         }
         
-        em {
-            color: var(--gold);
+        .faq-answer {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+        
+        /* FINAL CTA SECTION */
+        .final-cta {
+            text-align: center;
+        }
+        
+        .final-cta .big-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 500;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+        
+        .final-cta .medium-text {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 22px;
+            color: var(--text);
+            margin-bottom: 28px;
+        }
+        
+        .final-cta .blueprint-text {
+            font-size: 18px;
             font-style: italic;
+            color: var(--text);
+            margin-top: 16px;
         }
         
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* IMAGE PLACEHOLDERS */
+        .image-placeholder {
+            background: linear-gradient(135deg, var(--divider) 0%, #c9c5ba 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px dashed var(--brown);
+            border-radius: 8px;
         }
         
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .image-placeholder.round {
+            border-radius: 50%;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* FAQ ACCORDION */
+        .faq-accordion {
+            margin: 20px 0;
+        }
+        .faq-item-accordion {
+            border-bottom: 1px solid var(--divider);
+            margin-bottom: 0;
+        }
+        .faq-question-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question-btn:hover {
+            color: var(--brown);
+        }
+        .faq-question-btn::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--brown);
+            transition: transform 0.3s ease;
+        }
+        .faq-question-btn.active::after {
+            content: '−';
+        }
+        .faq-answer-accordion {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer-accordion.open {
+            max-height: 1000px;
+        }
+        .faq-answer-accordion p {
+            padding-bottom: 8px;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .faq-answer-accordion p:last-child {
+            margin-bottom: 0;
         }
         
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .container {
-                padding: 40px 24px;
+                padding: 36px 20px;
             }
             
-            .cyber-banner {
-                padding: 10px 0;
+            h1.main-title {
+                font-size: 38px;
             }
             
-            .banner-text {
-                font-size: 12px;
-                letter-spacing: 1px;
-            }
-            
-            .introducing {
-                font-size: 14px;
-                letter-spacing: 2px;
-                margin-bottom: 20px;
-            }
-            
-            h1 {
-                font-size: 42px;
-                white-space: normal;
-                line-height: 1.15;
-                margin-bottom: 4px;
-                padding: 0 10px;
-            }
-            
-            .subtitle-line {
-                font-size: 36px;
-                margin-bottom: 24px;
+            h1.main-title-italic {
+                font-size: 30px;
             }
             
             .subtitle {
-                font-size: 18px;
-                white-space: normal;
-                line-height: 1.7;
-                padding: 0 10px;
+                font-size: 17px;
             }
             
-            .subtitle br {
-                display: none;
+            .title-line {
+                margin: 16px auto 20px auto;
             }
             
             h2 {
-                font-size: 28px;
-                margin: 48px 0 24px 0;
-                line-height: 1.35;
-            }
-            
-            h2.addon-title {
-                font-size: 24px;
-            }
-            
-            p {
-                font-size: 16px;
-                line-height: 1.8;
-                margin-bottom: 20px;
-            }
-            
-            .checkmark-list li,
-            .sparkle-list li,
-            .wand-list li {
-                font-size: 16px;
-                padding: 14px 0;
-                padding-left: 32px;
-                line-height: 1.75;
-            }
-            
-            .checkmark-list li::before,
-            .sparkle-list li::before {
-                font-size: 20px;
-                top: 12px;
-            }
-            
-            .wand-list li {
-                padding: 24px 0;
-            }
-            
-            .wand-list li p {
-                margin: 12px 0;
-            }
-            
-            .divider {
-                margin: 48px auto;
-            }
-            
-            .highlight-box,
-            .price-box {
-                padding: 32px 20px;
-                margin: 40px -4px;
-            }
-            
-            .highlight-box h2 {
-                margin-top: 0;
-            }
-            
-            .cyber-special {
-                font-size: 36px;
-                margin-bottom: 12px;
-            }
-            
-            .investment-line {
-                font-size: 16px;
-            }
-            
-            .final-investment {
-                font-size: 28px;
-            }
-            
-            .until-2025 {
-                font-size: 14px;
+                font-size: 26px;
                 margin-bottom: 24px;
             }
             
-            .cta-button {
-                font-size: 16px;
-                padding: 20px 24px;
-                margin: 24px auto;
-                max-width: 100%;
+            h2.mega {
+                font-size: 22px;
+                line-height: 1.4;
             }
             
+            h3 {
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            
+            h3.module-title {
+                font-size: 18px;
+            }
+            
+            body {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+            
+            p {
+                margin-bottom: 16px;
+            }
+            
+            ul {
+                margin: 20px 0;
+            }
+            
+            ul li {
+                padding: 10px 0;
+                padding-left: 24px;
+            }
+            
+            .price-amount {
+                font-size: 48px;
+            }
+            
+            .price-note {
+                font-size: 16px;
+            }
+            
+            .cta-button, .cta-button-yellow {
+                padding: 16px 28px;
+                font-size: 13px;
+                letter-spacing: 1.5px;
+            }
+            
+            .cta-wrapper {
+                margin: 20px 0;
+            }
+            
+            .highlight-box,
+            .module-box,
+            .price-box,
+            .vip-box {
+                padding: 24px 18px;
+                margin: 20px 0;
+            }
+            
+            .testimonial-scroll img,
+            .testimonial-scroll .image-placeholder {
+                height: 220px;
+                width: 240px;
+            }
+            
+            .testimonial-scroll {
+                gap: 16px;
+            }
+            
+            .testimonial-scroll-container {
+                padding: 16px 0;
+            }
+            
+            .testimonial-static {
+                padding: 24px 16px;
+            }
+            
+            .testimonial-static .image-placeholder {
+                height: 300px;
+            }
+            
+            .final-cta .big-text {
+                font-size: 26px;
+            }
+            
+            .final-cta .medium-text {
+                font-size: 17px;
+            }
+            
+            .final-cta .blueprint-text {
+                font-size: 16px;
+            }
+            
+            .bio-section {
+                flex-direction: column !important;
+                gap: 24px !important;
+            }
+            
+            .bio-section > div {
+                min-width: 100% !important;
+            }
+            
+            .bio-section .image-placeholder {
+                height: 350px !important;
+            }
+            
+            /* Maeve testimonial mobile */
+            .section-brown .container {
+                padding: 36px 20px;
+            }
+            
+            .section-brown blockquote {
+                font-size: 16px !important;
+                line-height: 1.7 !important;
+            }
+            
+            /* Results ticker mobile */
+            .results-ticker-container {
+                padding: 14px 0;
+            }
+            
+            .results-ticker span {
+                font-size: 15px;
+                padding: 0 24px;
+            }
+            
+            /* FAQ mobile */
+            .faq-question-btn {
+                font-size: 17px;
+                padding: 16px 0;
+            }
+            
+            .faq-answer-accordion p {
+                font-size: 15px;
+            }
+            
+            /* Footer mobile */
             .footer {
-                margin-top: 60px;
-                padding-top: 32px;
+                margin-top: 36px;
+                padding-top: 28px;
             }
             
             .signature {
@@ -709,374 +757,544 @@
             }
             
             .tagline {
-                font-size: 18px;
+                font-size: 16px;
             }
             
-            .ps-section {
-                margin-top: 48px;
-                padding-top: 32px;
+            /* Emphasis text mobile */
+            .emphasis-big {
+                font-size: 20px;
             }
             
-            .ps-section p {
-                font-size: 15px;
-            }
-            
-            strong {
-                font-weight: 600;
+            /* Price section context mobile */
+            .price-box + div p {
+                font-size: 16px !important;
             }
         }
         
-        /* Extra small devices */
+        /* Extra small screens */
         @media (max-width: 400px) {
             .container {
-                padding: 32px 20px;
+                padding: 28px 16px;
             }
             
-            h1 {
-                font-size: 36px;
+            h1.main-title {
+                font-size: 32px;
             }
             
-            .subtitle-line {
-                font-size: 30px;
-            }
-            
-            .subtitle {
-                font-size: 16px;
+            h1.main-title-italic {
+                font-size: 26px;
             }
             
             h2 {
                 font-size: 24px;
             }
             
-            .cyber-special {
-                font-size: 30px;
+            h2.mega {
+                font-size: 20px;
             }
             
-            .final-investment {
-                font-size: 24px;
+            .price-amount {
+                font-size: 42px;
             }
             
-            .cta-button {
-                font-size: 15px;
-                padding: 18px 20px;
+            .cta-button, .cta-button-yellow {
+                padding: 14px 24px;
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Cyber Week Scrolling Banner -->
-    <div class="cyber-banner">
-        <div class="banner-content">
-            <span class="banner-text">⚡ CYBER WEEK SPECIAL ⚡ Starting at $333 • Price increases $111 daily • Dec 1: $333 • Dec 2: $444 • Dec 3: $555 • Dec 4: $666 • Dec 5: $777 • Dec 6: $888</span>
-            <span class="banner-text">⚡ CYBER WEEK SPECIAL ⚡ Starting at $333 • Price increases $111 daily • Dec 1: $333 • Dec 2: $444 • Dec 3: $555 • Dec 4: $666 • Dec 5: $777 • Dec 6: $888</span>
-            <span class="banner-text">⚡ CYBER WEEK SPECIAL ⚡ Starting at $333 • Price increases $111 daily • Dec 1: $333 • Dec 2: $444 • Dec 3: $555 • Dec 4: $666 • Dec 5: $777 • Dec 6: $888</span>
+
+    <!-- SECTION 1: HEADER (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <div class="header">
+                <h1 class="main-title">Next Level Fast Track™</h1>
+                <h1 class="main-title-italic">Guided Experience</h1>
+                <div class="title-line"></div>
+                
+                <p class="subtitle">For the woman who's ready to make 2026 the year <strong>everything finally clicks</strong>,<br>not another year of <strong style="color: var(--red);">"almost there."</strong></p>
+            </div>
         </div>
     </div>
     
-    <div class="sparkle-bg" id="sparkles"></div>
-    
-    <div class="container">
-        <div class="header">
-            <div class="introducing">Introducing</div>
+    <!-- RESULTS TICKER -->
+    <div class="results-ticker-container">
+        <div class="results-ticker">
+            <span>$16K week</span><span class="dot">•</span>
+            <span>4 high-ticket clients signed and paid</span><span class="dot">•</span>
+            <span>$4,500 in one IG live</span><span class="dot">•</span>
+            <span>7 new clients in half a month</span><span class="dot">•</span>
+            <span>$30K client</span><span class="dot">•</span>
+            <span>$200K year</span><span class="dot">•</span>
+            <span>3-5x revenue</span><span class="dot">•</span>
+            <span>$50K-$200K clients</span><span class="dot">•</span>
+            <span>$16K week</span><span class="dot">•</span>
+            <span>4 high-ticket clients signed and paid</span><span class="dot">•</span>
+            <span>$4,500 in one IG live</span><span class="dot">•</span>
+            <span>7 new clients in half a month</span><span class="dot">•</span>
+            <span>$30K client</span><span class="dot">•</span>
+            <span>$200K year</span><span class="dot">•</span>
+            <span>3-5x revenue</span><span class="dot">•</span>
+            <span>$50K-$200K clients</span><span class="dot">•</span>
         </div>
-        
-        <h1>Next Level Fast Track™</h1>
-        <div class="subtitle-line">Guided Experience</div>
-        
-        <p class="subtitle">For the woman who's ready to make 2026 her first quantum year,<br>not another "a bit better" incremental upgrade.</p>
-        
-        <div class="divider"></div>
-        
-        <div class="section">
-            <p><strong>It's December 2025</strong></p>
+    </div>
+    
+    <!-- SECTION 2: OPENING (White) -->
+    <div class="section-white">
+        <div class="container">
+            <p>If you're anything like the women I work with, you can feel this…</p>
             
-            <p>And if you're anything like the women I work with, you can so much feel this…</p>
-            
-            <p>You are <strong>SO. FUCKING. DONE.</strong></p>
+            <p class="emphasis-big emphasis-red">You are SO. FUCKING. DONE.</p>
             
             <p>Done circling the same income level, the same clients, the same "almost there" energy.</p>
             
             <p>You're done with pushing boulders uphill just to keep momentum going.</p>
             
-            <p>Done with posting content that gets likes but not inquiries.</p>
+            <p>Done with posting content that gets likes but not clients.</p>
             
             <p>Done with lowering your prices because you're afraid no one will say yes at the number you <em>actually</em> want to charge.</p>
             
-            <p>Done with another year of "working on it" and ending up in the same place.</p>
+            <p><strong class="emphasis-red">Done with yet another year of "working on it" and ending up in the same place.</strong></p>
             
             <p>Ok, maybe a tad better.</p>
             
-            <p>Maybe a few thousand more, but nowhere NEAR the level you KNOW is possible.</p>
+            <p>Maybe a few thousand more, but <strong>nowhere NEAR</strong> the level you KNOW is possible.</p>
             
-            <p>But the thing is…</p>
+            <p><strong>And I totally get it.</strong></p>
             
-            <p>You don't want "a bit more"!</p>
+            <p><strong class="emphasis-red">You don't want "a bit more"!</strong></p>
             
             <p><strong>You want your whole next level.</strong></p>
             
-            <p>And you want it <strong>NOW</strong>.</p>
+            <p>And you want it <strong class="emphasis-red">NOW</strong>.</p>
             
-            <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">
-                SAY NO MORE, I'M IN!
-            </a>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <h2>Here's what you actually want for 2026:</h2>
-        
-        <ul class="checkmark-list">
-            <li>To post once and have people reach out asking, "Where do I sign up?"</li>
-            <li>To triple your prices and watch clients pay without hesitation</li>
-            <li>To have your calendar fill with dream clients who are ready, eager, and committed instead of "I love this, but I need to think about it" kinda BS that you're so tired of.</li>
-            <li>To finally feel like your business is WORKING, not just surviving between wins and dips</li>
-            <li>To make decisions from desire, not fear or scarcity</li>
-            <li>To experience Stripe notifications that make you grin as you put on your collagen mask on a Sunday mornings, do reps in the gym, or run errands</li>
-            <li>To KNOW, in your nervous system, that you are the woman clients spot and instantly think: <em>"She's the one."</em></li>
-        </ul>
-        
-        <p>That's what Next Level Fast Track™ Guided Experience helps you create</p>
-        
-        <p><strong>And it <em>doesn't</em> take months.</strong></p>
-        
-        <p>Just 6 weeks.</p>
-        
-        <p>Zero guesswork, overwhelm, or busy scheduling.</p>
-        
-        <p>Instead, a <strong>total shift in how you feel, lead, attract clients, and make money.</strong></p>
-        
-        <p>For good.</p>
-        
-        <div class="divider"></div>
-        
-        <h2>This is for you if:</h2>
-        
-        <ul class="checkmark-list">
-            <li>You've done the work. Hired the coaches. Bought the strategies. And still… you're not where you KNOW you could be.</li>
-            <li>You're signing clients, but it feels like pushing a boulder uphill to keep things going.</li>
-            <li>You're done obsessing about the perfect strategy and ready to move in a way that actually gets you PAID.</li>
-            <li>You crave more money, better clients, and way more ease.</li>
-            <li>You're ready to release burnout, self-doubt, and fear of judgment FOR FUCKING EVER while still making more than ever before.</li>
-            <li>You're ready to BE the woman clients instantly know is "the one."</li>
-            <li>And you don't want to spend 5-figures on doing it with my personal assistance 😜</li>
-        </ul>
-        
-        <div class="divider"></div>
-        
-        <h2>What happens inside the Next Level Fast Track™ Guided Experience:</h2>
-        
-        <ul class="wand-list">
-            <li>
-                <strong>We start by getting crystal clear on what your next level actually IS.</strong><br>
-                Not the generic Pinterest-board version. The <em>real</em> one.
-                
-                <p style="margin: 16px 0;">Your real next-level income. Your next-level clients. Your next-level standards.</p>
-                
-                As a result, you stop aiming in 17 directions and get the clarity and conviction that this actually IS achievable.
-            </li>
-            
-            <li>
-                <strong>We release all the shit that keeps screwing your momentum.</strong>
-                
-                <p style="margin: 16px 0;">The things that make you second-guess yourself, convince, prove, create a fantastic month just to self-sabotage again, and so much more.</p>
-                
-                You finally release the doubts, the emotional whiplash, and all the entrepreneurial fears (because you and I both know that in this line of work, fearing being "too much" and "not enough" all at the same time is totally possible!).
-                
-                <p style="margin: 16px 0 0 0;"><strong>Now you get to learn how to let that shit go, FAST.</strong></p>
-            </li>
-            
-            <li>
-                <strong>You stop tiptoeing and start feeling, moving, speaking, and taking action like the woman who's already at that next level.</strong><br>
-                Not one day. Not some day. NOW.
-                
-                <p style="margin: 16px 0;">Your energy shifts. Your decisions shift. Suddenly, that new level feels palpable.</p>
-                
-                This is what most women in business miss, and they forever get caught up in the "work harder to make more" game.
-                
-                <p style="margin: 16px 0 0 0;">But not you. And from now on, it's only going to get faster and easier.</p>
-            </li>
-            
-            <li>
-                <strong>We raise the "client bar"</strong> so you can stop attracting the "almosts," the flakers, the "maybe laters" and start calling in people who are READY, excited, and already sold.
-            </li>
-            
-            <li>
-                <strong>We upgrade your money standards.</strong>
-                
-                <p style="margin: 16px 0;">You shift into the woman who can attract and HOLD more money than ever before, on a consistent basis. Without self-sabotaging or leaking.</p>
-                
-                And finally, you can feel it in your nervous system AND in your Stripe account!
-            </li>
-            
-            <li>
-                <strong>We get it all to click:</strong><br>
-                Your <em>content</em>. Your <em>message</em>. Your <em>pricing</em>. Your <em>presence</em>.
-                
-                <p style="margin: 16px 0;">You stop <em>trying</em> to stand out and yet, finally - you DO. Because suddenly, there's no one else like you in the room.</p>
-                
-                And we'll do it in a way that feels simple and sustainable.
-            </li>
-        </ul>
-        
-        <div class="divider"></div>
-        
-        <h2 style="text-align: center;">This isn't another program.<br>It's a profound identity upgrade.</h2>
-        
-        <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">
-            I WANT IN!
-        </a>
-        
-        <div class="highlight-box">
-            <h2>The Guided Experience Format</h2>
-            
-            <p>This is my complete Next Level Fast Track™ transformation delivered in a powerful, guided but self-led format.</p>
-            
-            <p>You get <strong>my exact identity-shifting process, including the subconscious resources to achieve it</strong>.</p>
-            
-            <p>I am talking about the entire six-week next-level transformation, just for you.</p>
-            
-            <p>The same work my VIP clients use, but without the VIP investment.</p>
-            
-            <p><strong>Here's what's included:</strong></p>
-            
-            <ul class="checkmark-list">
-                <li><strong>6 weeks of powerful conscious + subconscious curriculum delivered straight to your phone via private podcast.</strong> Listen anytime, anyplace, exactly the way you want. No Zoom calls to show up for. No group chaos. Just you, the work, and the transformation.</li>
-                
-                <li><strong>Weekly emails to keep you on track</strong> including prompts, reminders, and guidance so you actually DO the work (because we both know having access means nothing if you don't use it).</li>
-                
-                <li><strong>The exact process my private clients pay five figures for</strong> distilled into a guided experience you can move through at your own pace.</li>
-            </ul>
-            
-            <p><strong>This is for the woman who knows she's meant for more in 2026 and is <em>ready</em> to take full responsibility for making it happen.</strong></p>
-            
-            <p>You want the entire tested and proven no-BS process.</p>
-            
-            <p>You want a guided path with clear direction instead of guessing your way forward.</p>
-            
-            <p><strong>You're ready to show the fuck up for next-level results, but have my guidance to do that in a simple-to-follow blueprint that always works (when you do the work)</strong></p>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <h2>The Shift</h2>
-        
-        <p>By the end of 6 weeks, you can:</p>
-        
-        <ul class="sparkle-list">
-            <li>Own your value without flinching, no matter who's in the room. <em>Think: bolder content that gets you noticed and paid.</em></li>
-            
-            <li>Start calling in high-paying clients with messaging and positioning so powerful they notice you (and want you!) instantly. No more convincing. Instead, <em>a waitlist of ready clients.</em></li>
-            
-            <li>Let go of shiny strategies and finally focus on the moves that actually bring money in, <em>on repeat.</em> (Imagine never worrying about the algorithm ever again!)</li>
-            
-            <li>3–5x your revenue and keep it growing while signing better clients and working fewer hours than before.</li>
-            
-            <li>Start planning that house remodel, moving to that new location, or another life upgrade… <em>simply because you can.</em></li>
-        </ul>
-        
-        <p>This is where Stripe lights up, your calendar fills with clients you actually love working with, and you finally feel the freedom you've been craving for years.</p>
-        
-        <div class="divider"></div>
-        
-        <div class="price-box">
-            <div class="cyber-special">Cyber Week Special</div>
-            <div class="investment-line">Investment changes daily</div>
-            <div class="final-investment">Final investment $888</div>
-            <div class="until-2025">Only until the end of 2025</div>
-            
-            <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">
-                Click Here to Get Started
-            </a>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <h2>Want more support?</h2>
-        
-        <div class="highlight-box">
-            <h2 class="addon-title">Add-On: Next Level Tailored Strategy Call ($499)</h2>
-            
-            <p>If you want my eyes on YOUR specific niche, situation, and business level and you want me to give you the exact instructions for how to use the Next Level Fast Track™ Guided Experience for maximum benefit, you can add a private 1:1 Next Level Strategy Call for $499 at checkout.</p>
-            
-            <p>This is a one-time, highly personalized session where I'll help you:</p>
-            
-            <ul class="sparkle-list">
-                <li>Identify your biggest next-level blocks</li>
-                <li>Map out your specific next-level path</li>
-                <li>Create a custom game plan for how to move through NLFT for YOUR fastest results</li>
-            </ul>
-            
-            <p><strong>You'll walk away with total clarity and a plan that's tailored to YOU, your business and niche in 2026 and moving forward</strong></p>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <h2>Prefer to do this work WITH me?</h2>
-        
-        <p>If you're the woman who wants the deepest level of personalization, privacy, and high-proximity support and you're ready to collapse months of inner work into weeks with my direct guidance every step of the way, I have very limited spots for the Next Level Fast Track™ VIP Experience.</p>
-        
-        <p>This is application-only and designed for the woman who's already successful but nowhere near her potential.</p>
-        
-        <p>If that's you, email me at <a href="mailto:support@theidentitymagician.com" style="color: var(--gold);">support@theidentitymagician.com</a> with the subject line "Next-Level Ready" and we'll talk about whether this is your next move.</p>
-        
-        <div class="divider"></div>
-        
-        <h2>The Bottom Line</h2>
-        
-        <p><strong>December 2025 has started.</strong></p>
-        
-        <p>2025 is almost over.</p>
-        
-        <p>You can spend the next year circling the same level, trying new strategies, <em>hoping</em> something finally clicks…</p>
-        
-        <p><strong>Or you can decide to make 2026 the year when <em>everything</em> changes.</strong></p>
-        
-        <p>The year you <strong>triple your revenue</strong> (as a minimum)</p>
-        
-        <p>The year you sign <strong>dream clients</strong> who <strong>pay top dollar</strong> <em>without</em> hesitation.</p>
-        
-        <p>The year your <strong>business finally feels EASY</strong>.</p>
-        
-        <p>You already know what you want.</p>
-        
-        <p>Now it's time to take personal responsibility for becoming the woman who has it.</p>
-        
-        <div class="divider"></div>
-        
-        <h2 style="text-align: center;">Jump into the Next Level Fast Track™ Guided Experience</h2>
-        
-        <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">
-            Click Here to Get Started
-        </a>
-        
-        <p style="text-align: center; margin-top: 24px; font-size: 22px;"><strong style="background: linear-gradient(135deg, var(--gold) 0%, #F4E4C1 50%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">and let's make 2026 your first quantum year!</strong></p>
-        
-        <div class="footer">
-            <div class="signature">Kasia</div>
-            <div class="tagline">The Identity Magician</div>
-        </div>
-        
-        <div class="ps-section">
-            <p><strong>P.S.</strong> Every woman I work with tells me the same thing later on: <em>"I wish I had hired you sooner."</em></p>
-            <p>If you feel the pull, act now.</p>
-            
-            <p style="margin-top: 24px;"><strong>P.P.S.</strong> If you're stuck between the Guided Experience and the VIP path, email my team at <a href="mailto:support@theidentitymagician.com" style="color: var(--gold);">support@theidentitymagician.com</a> and we'll help you choose the one that best matches what you really need right now.</p>
+            <div class="cta-wrapper">
+                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">SAY NO MORE, I'M IN!</a>
+            </div>
         </div>
     </div>
     
-    <script>
-        // Create sparkle effect
-        const sparkleContainer = document.getElementById('sparkles');
-        const sparkleCount = 30;
-        
-        for (let i = 0; i < sparkleCount; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 3 + 's';
-            sparkleContainer.appendChild(sparkle);
-        }
-    </script>
-</body>
-</html>
+    <!-- SECTION 3: WHAT YOU WANT (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <h2>Here's what you actually want for 2026:</h2>
+            
+            <ul>
+                <li>To post once and have people reach out asking, <strong>"Where do I sign up?"</strong></li>
+                <li>To <strong>triple your prices</strong> and watch clients pay without hesitation</li>
+                <li>To have your calendar fill with <strong>dream clients</strong> who are ready, eager, and committed instead of "I love this, but I need to think about it" kinda BS that you're so tired of.</li>
+                <li>To finally feel like your business is <strong>WORKING</strong>, not just surviving between wins and dips</li>
+                <li>To make decisions from <strong>desire</strong>, not fear or scarcity</li>
+                <li>To experience <strong>Stripe notifications</strong> that make you grin as you put on your collagen mask on Sunday mornings, do reps in the gym, or run errands</li>
+                <li>To KNOW, in your nervous system, that you are the woman clients spot and instantly think: <em><strong>"She's the one."</strong></em></li>
+            </ul>
+            
+            <p>That's what <strong>Next Level Fast Track™ Guided Experience</strong> helps you create.</p>
+            
+            <p><strong>And it <em>doesn't</em> take months.</strong></p>
+            
+            <p>Just <strong>6 weeks</strong>.</p>
+            
+            <p>Zero guesswork, overwhelm, or busy scheduling.</p>
+            
+            <p>Instead, a <strong class="emphasis-red">total shift in how you feel, lead, attract clients, and make money.</strong></p>
+            
+            <p>For good.</p>
+        </div>
+    </div>
+    
+    <!-- SECTION 4: THIS IS FOR YOU IF (White) -->
+    <div class="section-white">
+        <div class="container">
+            <h2>This is for you if:</h2>
+            
+            <ul>
+                <li>You've done the work. Hired the coaches. Bought the strategies. And still… <strong>you're not where you KNOW you could be</strong>.</li>
+                <li>You're signing clients, but it feels like <strong>dragging dead weight</strong> to keep things going.</li>
+                <li>You're done obsessing about the perfect strategy and <strong>ready to move in a way that actually gets you PAID</strong>.</li>
+                <li>You crave <strong>more money, better clients, and way more ease</strong>.</li>
+                <li>You're ready to release burnout, self-doubt, and fear of judgment <strong>FOR FUCKING EVER</strong> while still making more than ever before.</li>
+                <li>You're ready to <strong>BE the woman</strong> clients instantly know is "the one."</li>
+                <li>And you don't want to spend 5-figures on doing it with my personal assistance 😜</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- SCROLLING TESTIMONIALS -->
+    <div class="testimonial-scroll-container">
+        <div class="testimonial-scroll" id="testimonialScroll">
+            <img src="https://www.dropbox.com/scl/fi/bnxplip60tfrt2ek4mnuq/single-testimonial-1.png?rlkey=a92bqzo6e6p0q1qveafjt1gex&st=m8w2f84s&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/rkd4co8a4ylrfpd3u0qhv/single-testimonial-2.png?rlkey=vv710apwnkbjwhusitwyjx33f&st=5dvt9yra&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/2l7disyu5sw6vxx95gopd/single-testimonial-3.png?rlkey=0m6v6dgwznxzhdlo1zrfr5alw&st=hd3uiyzi&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/lm39akei6t31k89ueh5f5/single-testimonial-4.png?rlkey=uheoth5okde2txfy81fjgwtox&st=b8s1no57&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/a1xvph7cjc27bbptvw9pu/single-testimonial-5.png?rlkey=it2jdca1z9alur4ith6vrj1v0&st=2fh4inqf&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/2sg60r5d9qv9nvnizywfa/single-testimonial-6.png?rlkey=84qmk7cf6qhhho9gjku45xkmy&st=f5hl8n64&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <!-- Duplicate for seamless scrolling -->
+            <img src="https://www.dropbox.com/scl/fi/bnxplip60tfrt2ek4mnuq/single-testimonial-1.png?rlkey=a92bqzo6e6p0q1qveafjt1gex&st=m8w2f84s&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/rkd4co8a4ylrfpd3u0qhv/single-testimonial-2.png?rlkey=vv710apwnkbjwhusitwyjx33f&st=5dvt9yra&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/2l7disyu5sw6vxx95gopd/single-testimonial-3.png?rlkey=0m6v6dgwznxzhdlo1zrfr5alw&st=hd3uiyzi&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/lm39akei6t31k89ueh5f5/single-testimonial-4.png?rlkey=uheoth5okde2txfy81fjgwtox&st=b8s1no57&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/a1xvph7cjc27bbptvw9pu/single-testimonial-5.png?rlkey=it2jdca1z9alur4ith6vrj1v0&st=2fh4inqf&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+            <img src="https://www.dropbox.com/scl/fi/2sg60r5d9qv9nvnizywfa/single-testimonial-6.png?rlkey=84qmk7cf6qhhho9gjku45xkmy&st=f5hl8n64&dl=1" alt="Client testimonial" style="height: 320px; width: auto; border-radius: 8px;">
+        </div>
+    </div>
+    
+    <!-- SECTION 5: WHAT HAPPENS INSIDE (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <h2 class="black">What happens inside the Next Level Fast Track™ Guided Experience:</h2>
+            
+            <div class="module-box">
+                <h3 class="module-title">We start by getting crystal clear on what your next level actually IS.</h3>
+                <p>Not the generic Pinterest-board version. The <em>real</em> one.</p>
+                <p>Your real next-level income. Your next-level clients. Your next-level standards.</p>
+                <p>As a result, you stop aiming in 17 directions and get the <strong>clarity and conviction</strong> that this actually IS achievable.</p>
+            </div>
+            
+            <div class="module-box">
+                <h3 class="module-title">We release all the shit that keeps screwing your momentum.</h3>
+                <p>The things that make you second-guess yourself, convince, prove, create a fantastic month just to <strong>self-sabotage again</strong>, and so much more.</p>
+                <p>You finally release the doubts, the emotional whiplash, and all the entrepreneurial fears (because you and I both know that in this line of work, fearing being "too much" and "not enough" all at the same time is totally possible!).</p>
+                <p><strong>Now you get to learn how to let that shit go, FAST.</strong></p>
+            </div>
+            
+            <div class="module-box">
+                <h3 class="module-title">You stop tiptoeing and start feeling, moving, speaking, and taking action like the woman who's already at that next level.</h3>
+                <p>Not one day. Not some day. <strong>NOW.</strong></p>
+                <p>Your energy shifts. Your decisions shift. Suddenly, that new level feels palpable.</p>
+                <p>This is what most women in business miss, and they forever get caught up in the "work harder to make more" game.</p>
+                <p>But not you. And from now on, <strong>it's only going to get faster and easier</strong>.</p>
+            </div>
+            
+            <div class="module-box">
+                <h3 class="module-title">We raise the client bar so you stop attracting maybes and start calling in ready buyers.</h3>
+                <p>No more "almosts," no more flakers, no more "maybe laters."</p>
+                <p>Instead, people who are <strong>READY, excited, and already sold</strong>.</p>
+            </div>
+            
+            <div class="module-box">
+                <h3 class="module-title">We upgrade your money standards.</h3>
+                <p>You shift into the woman who can attract AND <strong>HOLD</strong> more money than ever before, on a consistent basis. Without self-sabotaging or leaking.</p>
+                <p>And finally, you can feel it in your nervous system AND in your <strong>Stripe account</strong>!</p>
+            </div>
+            
+            <div class="module-box">
+                <h3 class="module-title">We get it all to click.</h3>
+                <p>Your <strong>content</strong>. Your <strong>message</strong>. Your <strong>pricing</strong>. Your <strong>presence</strong>.</p>
+                <p>You stop <em>trying</em> to stand out and yet, finally - you DO. Because suddenly, <strong>there's no one else like you in the room</strong>.</p>
+                <p>And we'll do it in a way that feels simple and sustainable.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 6: IDENTITY UPGRADE STATEMENT (Brown) -->
+    <div class="section-brown">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 class="mega" style="color: var(--white);">
+                    <span style="display: block;">This isn't another program.</span>
+                    <span style="display: block;">It's the <em>missing piece</em> between where you are</span>
+                    <span style="display: block;">and the business <em>you know is possible</em>.</span>
+                </h2>
+                
+                <div class="cta-wrapper" style="margin-top: 20px; margin-bottom: 8px;">
+                    <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button-yellow">I WANT IN!</a>
+                </div>
+                <p style="font-size: 18px; font-style: italic; color: var(--white); opacity: 0.9;">I'm ready to stop circling and 3-5x my revenue without delay!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 7: GUIDED EXPERIENCE FORMAT (White) -->
+    <div class="section-white">
+        <div class="container">
+            <h2>The Guided Experience Format</h2>
+            
+            <p>This is the <strong>most powerful version</strong> of my $12K VIP process, stripped down to the exact shifts that create the best results in the shortest time.</p>
+            
+            <p>Not a course with 47 modules you'll never finish.</p>
+            
+            <p>Not a group program where you sit through calls about other people's lead magnets.</p>
+            
+            <p>Not another strategy that sounds good, but only in theory.</p>
+            
+            <p><strong>None of that.</strong></p>
+            
+            <p>These are extremely specific, powerful, and <strong>momentum-igniting shifts</strong> that hit the areas that actually matter:</p>
+            
+            <p><strong>Next-level clarity.</strong><br>
+            <strong>Next-level confidence and empowerment.</strong><br>
+            <strong>Next-level money thermostat.</strong><br>
+            <strong>Next-level client attraction.</strong><br>
+            <strong>Next-level positioning that does the selling for you.</strong></p>
+            
+            <p>You get me in your ear via <strong>private audio experience</strong>, guiding you through the conscious AND subconscious work.</p>
+            
+            <p>Plus <strong>ongoing email support</strong>, making sure you have all you need, every step of the way.</p>
+            
+            <p>No fluff.<br>
+            No fillers.<br>
+            No group chaos.</p>
+            
+            <p><strong>Just the real stuff that works.<br>
+            Every. Single. Time.</strong></p>
+        </div>
+    </div>
+    
+    <!-- STATIC TESTIMONIAL COLLAGE -->
+    <div class="section-beige">
+        <div class="testimonial-static">
+            <!-- 
+            =====================================================
+            IMAGE INSTRUCTIONS: Replace this placeholder with your testimonial collage image
+            Example: <img src="https://your-domain.com/images/testimonial-collage.jpg" alt="Client testimonials collage">
+            =====================================================
+            -->
+            <img src="https://www.dropbox.com/scl/fi/u6u3oeii7ntrsxdk01hce/testimonials-img.png?rlkey=22qo000z9613vor76o3ngpjpv&st=av0lcafu&dl=1" alt="Client testimonials collage" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
+        </div>
+    </div>
+    
+    <!-- SECTION 8: THE SHIFT (White) -->
+    <div class="section-white">
+        <div class="container">
+            <h2>By the end of 6 weeks, you can:</h2>
+            
+            <ul>
+                <li><strong>Charge $10K, $15K, $30K+</strong> and watch clients say yes without flinching.</li>
+                <li>Become the one clients DM asking <strong>"when can we work together?"</strong> every single day of the week.</li>
+                <li>Ditch the strategy hopping. Focus on what actually <strong>creates the upgrade and moves the needle</strong>, and watch the money follow.</li>
+                <li>Finally feel <strong>SAFE making more money</strong>. No more subconscious sabotage, no more "great month then crash." Just consistent, growing income that stays.</li>
+                <li>Show up online with <strong>unshakeable confidence</strong>, just like all the women you admire! No more shrinking, filtering, or trying to be palatable.</li>
+                <li><strong>3-5x your revenue</strong> and keep it growing while signing better clients and working fewer hours than before.</li>
+                <li><strong>Book that trip. Start that remodel. Buy that car.</strong> Because you finally can.</li>
+            </ul>
+            
+            <p style="font-size: 20px; margin-top: 32px;"><strong>This is where Stripe lights up, your calendar fills with clients you actually love working with, and you finally have the money to create the freedom you've been craving for years.</strong></p>
+            
+            <p style="text-align: center; margin-top: 32px; font-size: 18px;">Ready to create this? <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" style="color: var(--red); font-weight: 700; text-decoration: underline;">Jump inside NLFT Experience NOW!</a></p>
+        </div>
+    </div>
+    
+    <!-- ABOUT KASIA (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <h2 class="black">Who the Heck is Kasia?</h2>
+            
+            <div class="bio-section" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px; max-width: 900px; margin: 0 auto;">
+                <div style="flex: 2; min-width: 300px;">
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">I traded examining animals for examining what holds entrepreneurs back.</p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">From veterinarian to successful business owner with zero business background - now I help passionate online entrepreneurs stop circling their potential and reach their next level, fast.</p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;"><strong>More money. Better clients. Business that feels easy.</strong></p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">My VIP clients go from $10K-$25K months to consistent $50K, $100K, even $200K+ months NOT because I teach them a new funnel.</p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">I simply help them BECOME the ones who show up and attract at that level, effortlessly.</p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">I live by the Polish coast with my husband and two of our six kids, running on black coffee, sea air, and a deep belief that more wealthy, aligned humans will make the world a better place.</p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8;"><strong>If you're still reading, you're probably my human.</strong> 💛</p>
+                </div>
+                <div style="flex: 1; min-width: 280px;">
+                    <!-- 
+                    =====================================================
+                    IMAGE INSTRUCTIONS: Replace this placeholder with Kasia's photo
+                    Example: <img src="https://your-domain.com/images/kasia-photo.jpg" alt="Kasia Rutkowiak" style="width: 100%; border-radius: 8px;">
+                    =====================================================
+                    -->
+                    <img src="https://www.dropbox.com/scl/fi/3tjiwxqr3x4kn5xcgx7t4/Kasia-Rutkowiak.png?rlkey=u5es2b29dk8xbdjfy9tcds17d&st=yrsi21s4&dl=1" alt="Kasia Rutkowiak" style="width: 100%; height: auto; border-radius: 8px; min-width: 320px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAEVE TESTIMONIAL (Brown) -->
+    <div class="section-brown">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <!-- 
+                =====================================================
+                IMAGE INSTRUCTIONS: Replace this placeholder with Maeve's photo
+                Example: <img src="https://your-domain.com/images/maeve-photo.jpg" alt="Maeve Ferguson" style="width: 110px; height: 110px; border-radius: 50%; margin-bottom: 24px; object-fit: cover; border: 3px solid var(--yellow);">
+                =====================================================
+                -->
+                <img src="https://www.dropbox.com/scl/fi/f5fszfdqhip9vhmivz8zr/maeve-round.png?rlkey=lrtdlgoal506debiufnfhz0ox&st=ru1mrwmx&dl=1" alt="Maeve Ferguson" style="width: 110px; height: 110px; border-radius: 50%; margin: 0 auto 24px auto; object-fit: cover; border: 3px solid var(--yellow); display: block;">
+                <blockquote style="font-family: 'Nunito Sans', sans-serif; font-size: 18px; font-style: normal; line-height: 1.8; color: var(--white); margin-bottom: 20px;">
+                    "<strong style="color: var(--white);">Kasia is my secret weapon.</strong> She rewired the part of me that kept hitting the ceiling, no matter how 'smart' my plan was.<br><br>I don't work hard anymore. Clients come to me, <strong style="color: var(--white);">7- and 8-figure leaders</strong> are showing up in my DMs, and I'm being invited into the <strong style="color: var(--white);">dream rooms</strong> I used to admire from afar.<br><br>The work we did has taken me from <strong style="color: var(--white);">$3k to $50-$200k clients</strong>, and I keep growing.<br><br>None of this happened because I changed my strategy.<br><strong style="color: var(--white);">It happened because I changed ME</strong>, and I couldn't have done it without Kasia."
+                </blockquote>
+                <div style="font-family: 'Playfair Display', serif; font-size: 18px; font-style: italic; color: var(--yellow);">— Maeve Ferguson, Maeve Ferguson Consulting</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 9: PRICE BOX (White) -->
+    <div class="section-white">
+        <div class="container">
+            <div class="price-box" style="padding: 40px;">
+                <div class="price-amount">Just $888</div>
+                <div class="price-note" style="margin-top: 6px; margin-bottom: 24px;">Going up to $997 soon!</div>
+                
+                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button" style="margin: 0;">CLICK HERE TO JUMP IN</a>
+                
+                <p class="cta-subtext" style="margin-top: 24px; margin-bottom: 0; font-size: 18px;">Get the full framework that my clients use to hit $20K - $60K months<br>and skyrocket their businesses in the shortest amount of time.</p>
+            </div>
+            
+            <!-- INVESTMENT CONTEXT -->
+            <div style="text-align: center; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 20px; line-height: 1.7; margin-bottom: 16px;"><strong style="color: #7b1b18 !important;">You already know this is your next level.</strong></p>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">One $15K client pays this back 17x.<br>Reaching $30K months changes your life forever (and it only gets better from there).</p>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">The question is not whether you can "afford" the investment.<br>It's whether you can afford to <strong>delay that next level</strong> for yet another year, month, or week.</p>
+                <p style="font-size: 20px; line-height: 1.7;"><strong>And you know the answer already, don't you?</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 10: WANT MORE SUPPORT (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <h2 class="black">Want more support?</h2>
+            
+            <div class="highlight-box">
+                <h3>Add-On: Next Level Tailored Strategy Call ($499)</h3>
+                
+                <p>If you want my eyes on YOUR specific niche, situation, and business level and you want me to give you the exact instructions for how to use the Next Level Fast Track™ Guided Experience for maximum benefit, <u>you can</u> <strong>add a private 1:1 Next Level Strategy Call for $499 at checkout.</strong></p>
+                
+                <p style="margin-bottom: 10px;">This is a one-time, highly personalized session where I'll help you:</p>
+                
+                <ul style="margin-top: 0; margin-bottom: 20px;">
+                    <li><strong>Identify</strong> your biggest next-level blocks</li>
+                    <li><strong>Map out</strong> your specific next-level path</li>
+                    <li><strong>Create a custom game plan</strong> for moving through NLFT for fastest results</li>
+                </ul>
+                
+                <p>You'll walk away knowing exactly what to focus on, what to release, and how to use NLFT to get to your next level in the fastest way possible.</p>
+            </div>
+            
+            <div class="vip-box">
+                <h3>Looking for the VIP Experience?</h3>
+                
+                <p>If you're the woman who wants the deepest level of personalization, privacy, and high-proximity support and you're ready to collapse months of inner work into weeks with my direct guidance every step of the way, I have very limited spots for the Next Level Fast Track™ VIP Experience.</p>
+                
+                <p>This is application-only and designed for the woman who's already successful but nowhere near her potential.</p>
+                
+                <p>If that's you, email me at <a href="/cdn-cgi/l/email-protection#671412171708151327130f020e030209130e131e0a06000e040e06094904080a" style="color: var(--red);"><span class="__cf_email__" data-cfemail="74070104041b060034001c111d10111a001d000d1915131d171d151a5a171b19">[email&#160;protected]</span></a> with the subject line <strong>"Next-Level Ready"</strong> and we'll talk about whether this is your next move.</p>
+            </div>
+            
+            <!-- CTA BEFORE FAQ -->
+            <div class="cta-wrapper" style="margin-top: 40px;">
+                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">READY TO STOP CIRCLING? LET'S GO!</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SECTION 11: FAQ (White) -->
+    <div class="section-white">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-accordion">
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">What exactly do I get?</button>
+                    <div class="faq-answer-accordion">
+                        <p>You get <strong>6 weeks of powerful conscious + subconscious curriculum</strong> delivered via a private audio experience so that you can listen anytime, anywhere.</p>
+                        <p>No Zoom calls, no group chaos, just you, the immersive work, and the transformation.</p>
+                        <p>On top of that, you'll receive <strong>weekly emails</strong> to guide you through each step and keep you on track.</p>
+                        <p>This is the <strong>exact framework my VIP clients pay $12K for</strong>, distilled into a guided experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">How much time does this take?</button>
+                    <div class="faq-answer-accordion">
+                        <p>The entire Guided Experience is designed to <strong>fit into your life</strong>, not take over it.</p>
+                        <p>Most women do the subconscious work during their morning routine. The conscious audio drops are short and to the point, and the conscious work that comes with them takes about <strong>60-90 minutes a week</strong> total.</p>
+                        <p>Every piece builds on the next, and I guide you through exactly how to do it.</p>
+                        <p>This isn't a program that puts your life on hold. It's the <strong>easiest, most seamless transformation work</strong> you'll ever do.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">When will I see results?</button>
+                    <div class="faq-answer-accordion">
+                        <p>Most ladies experience shifts by <strong>week 2-3</strong>. Some notice changes in how they feel and show up <strong>within days</strong>.</p>
+                        <p>The business results (clients, money, opportunities) typically follow quickly after the internal shift happens.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">Is this another mindset program?</button>
+                    <div class="faq-answer-accordion">
+                        <p>No. This is an <strong>identity-level transformation</strong> that goes <strong>much deeper</strong> than mindset.</p>
+                        <p>We work with your subconscious patterns, your nervous system, and the invisible barriers that no amount of "thinking positive" can touch.</p>
+                        <p>That's why it works when other things haven't.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">What if I've tried everything and nothing works?</button>
+                    <div class="faq-answer-accordion">
+                        <p>If strategies, courses, and coaching haven't created the breakthrough you want, that's actually a sign <strong>this IS for you</strong>.</p>
+                        <p>It proves that your blocks have very little to do with strategies, and that's exactly what we address inside the NLFT Guided Experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">What if it doesn't work for me?</button>
+                    <div class="faq-answer-accordion">
+                        <p>Honestly? If you're already worried it won't work, this probably isn't for you.</p>
+                        <p>This experience is for the woman who's done waiting, done blaming strategies, and <strong>ready to take full responsibility for her next level</strong>.</p>
+                        <p>This process has been tested across industries, niches, languages, and countries. <strong>It works every single time</strong>, but... I'm not here to convince you.</p>
+                        <p>If you don't believe your business needs YOU to upgrade before anything else can follow, then <strong>I am not your guide</strong>.</p>
+                        <p>But if you're ready to take off?<br><strong>It will change everything!</strong></p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">Is the Tailored Strategy Call necessary?</button>
+                    <div class="faq-answer-accordion">
+                        <p>No, it's not. The Guided Experience is designed to <strong>work beautifully on its own</strong>.</p>
+                        <p>That said, some women know from day one that they want personalized guidance. If that's you, this is your best opportunity, especially since <strong>spots are limited</strong> due to time availability.</p>
+                        <p>If you want my personal support from the get-go to make sure we start strong together, <strong>grab it on checkout</strong>.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-accordion">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">How is it delivered / How long do I have access?</button>
+                    <div class="faq-answer-accordion">
+                        <p>You get <strong>immediate access</strong> the moment you sign up, and then I guide you through 6 weeks of the process that works beautifully with your life.</p>
+                        <p>No overwhelm. Every moment you spend on it will be returned a thousand-fold in the form of <strong>clients, opportunities, and money</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                function toggleFaq(btn) {
+                    const answer = btn.nextElementSibling;
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer-accordion').forEach(a => a.classList.remove('open'));
+                    document.querySelectorAll('.faq-question-btn').forEach(b => b.classList.remove('active'));
+                    
+                    // Toggle current one
+                    if (!isOpen) {
+                        answer.classList.add('open');
+                        btn.classList.add('active');
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    
+    <!-- SECTION 12: FINAL CTA (Beige) -->
+    <div class="section-beige">
+        <div class="container">
+            <div class="final-cta">
+                <p class="big-text" style="margin-bottom: 16px;">You already know what you want.</p>
+                
+                <p class="medium-text" style="margin-bottom: 24px;">Now it's time to take personal responsibility for making it happen.</p>
+                
+                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button" style="margin: 0;">LET'S MAKE 2026 THE YEAR WHEN EVERYTHING CLICKS<"
