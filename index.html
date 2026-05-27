@@ -33,6 +33,144 @@
             font-weight: 400;
         }
         
+        /* BIRTHDAY PRICE STYLES */
+        .price-strikethrough {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--black);
+            text-decoration: line-through;
+            opacity: 0.45;
+            font-size: 60px;
+            line-height: 1.1;
+            margin-bottom: 0;
+        }
+        
+        .price-birthday {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #7b1b18;
+            font-size: 72px;
+            line-height: 1.1;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .price-strikethrough {
+                font-size: 40px;
+            }
+            .price-birthday {
+                font-size: 56px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .price-strikethrough {
+                font-size: 34px;
+            }
+            .price-birthday {
+                font-size: 48px;
+            }
+        }
+        
+        /* ============================================ */
+        /* BIRTHDAY OFFER BANNER - REMOVE AFTER OFFER   */
+        /* ============================================ */
+        .birthday-banner {
+            background: linear-gradient(135deg, #7b1b18 0%, #9c2522 50%, #7b1b18 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px 20px;
+            font-family: 'Nunito Sans', sans-serif;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+            animation: bannerPulse 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes bannerPulse {
+            0%, 100% { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25); }
+            50% { box-shadow: 0 2px 24px rgba(226, 167, 20, 0.6); }
+        }
+        
+        .birthday-banner p {
+            margin: 0 !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+        
+        .birthday-banner strong {
+            color: #ffffff !important;
+            font-weight: 800 !important;
+        }
+        
+        .birthday-banner .birthday-emoji {
+            font-size: 22px;
+            margin-right: 8px;
+            display: inline-block;
+            animation: bounce 1.8s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        
+        .birthday-banner .code-highlight {
+            background: #e2a714;
+            color: #000000 !important;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 800 !important;
+            letter-spacing: 1.5px;
+            margin: 0 6px;
+            display: inline-block;
+            font-size: 18px;
+        }
+        
+        .birthday-banner .price-strike {
+            text-decoration: line-through;
+            opacity: 0.65;
+            margin: 0 4px;
+            color: #ffffff !important;
+        }
+        
+        .birthday-banner .price-highlight {
+            color: #e2a714 !important;
+            font-weight: 900 !important;
+            font-size: 22px;
+            margin: 0 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .birthday-banner {
+                padding: 14px 14px;
+            }
+            .birthday-banner p {
+                font-size: 14px !important;
+                line-height: 1.5;
+            }
+            .birthday-banner .price-highlight {
+                font-size: 16px;
+            }
+            .birthday-banner .code-highlight {
+                font-size: 14px;
+                padding: 3px 8px;
+                margin: 0 4px;
+            }
+            .birthday-banner .birthday-emoji {
+                font-size: 18px;
+            }
+        }
+        /* ============================================ */
+        /* END BIRTHDAY BANNER STYLES                   */
+        /* ============================================ */
+        
         /* SECTION BACKGROUNDS */
         .section-beige {
             background: var(--beige);
@@ -305,6 +443,36 @@
             font-style: italic;
             color: var(--text);
             margin-bottom: 24px;
+        }
+        
+        /* BIRTHDAY PRICE BOX OVERLAY */
+        .birthday-price-callout {
+            background: linear-gradient(135deg, #7b1b18 0%, #9c2522 100%);
+            color: #ffffff;
+            padding: 16px 24px;
+            border-radius: 6px;
+            margin: 0 auto 20px auto;
+            max-width: 480px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            border: 2px solid #e2a714;
+        }
+        
+        .birthday-price-callout strong {
+            color: #e2a714;
+            font-weight: 800;
+        }
+        
+        .birthday-price-callout .code-tag {
+            background: #e2a714;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin: 0 2px;
         }
         
         /* TESTIMONIALS */
@@ -806,6 +974,20 @@
 </head>
 <body>
 
+    <!-- ============================================ -->
+    <!-- BIRTHDAY OFFER BANNER                        -->
+    <!-- REMOVE THIS ENTIRE BLOCK AFTER OFFER ENDS    -->
+    <!-- (everything between this comment and END)    -->
+    <!-- ============================================ -->
+    <div class="birthday-banner">
+        <p>
+            <span class="birthday-emoji">🎂</span><strong>BIRTHDAY OFFER · 48 HOURS ONLY</strong> · Use code <span class="code-highlight">KASIA48</span> at checkout · <span class="price-strike">$997</span> <span class="price-highlight">$480</span>
+        </p>
+    </div>
+    <!-- ============================================ -->
+    <!-- END BIRTHDAY BANNER                          -->
+    <!-- ============================================ -->
+
     <!-- SECTION 1: HEADER (Beige) -->
     <div class="section-beige">
         <div class="container">
@@ -1046,12 +1228,6 @@
     <!-- STATIC TESTIMONIAL COLLAGE -->
     <div class="section-beige">
         <div class="testimonial-static">
-            <!-- 
-            =====================================================
-            IMAGE INSTRUCTIONS: Replace this placeholder with your testimonial collage image
-            Example: <img src="https://your-domain.com/images/testimonial-collage.jpg" alt="Client testimonials collage">
-            =====================================================
-            -->
             <img src="https://www.dropbox.com/scl/fi/u6u3oeii7ntrsxdk01hce/testimonials-img.png?rlkey=22qo000z9613vor76o3ngpjpv&st=av0lcafu&dl=1" alt="Client testimonials collage" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
         </div>
     </div>
@@ -1098,7 +1274,6 @@
                 </div>
             </div>
             
-            <!-- Centered text below -->
             <div style="text-align: center; max-width: 800px; margin: 40px auto 0 auto;">
                 <p style="font-size: 20px; line-height: 1.8; margin-bottom: 16px;"><strong style="color: #7b1b18 !important;">My VIP clients go from $10K-$25K months to consistent $50K, $100K,<br>even $200K+ months NOT because I teach them a new funnel.</strong></p>
                 
@@ -1115,12 +1290,6 @@
     <div class="section-brown">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <!-- 
-                =====================================================
-                IMAGE INSTRUCTIONS: Replace this placeholder with Maeve's photo
-                Example: <img src="https://your-domain.com/images/maeve-photo.jpg" alt="Maeve Ferguson" style="width: 110px; height: 110px; border-radius: 50%; margin-bottom: 24px; object-fit: cover; border: 3px solid var(--yellow);">
-                =====================================================
-                -->
                 <img src="https://www.dropbox.com/scl/fi/f5fszfdqhip9vhmivz8zr/maeve-round.png?rlkey=lrtdlgoal506debiufnfhz0ox&st=ru1mrwmx&dl=1" alt="Maeve Ferguson" style="width: 110px; height: 110px; border-radius: 50%; margin: 0 auto 24px auto; object-fit: cover; border: 3px solid var(--yellow); display: block;">
                 <blockquote style="font-family: 'Nunito Sans', sans-serif; font-size: 18px; font-style: normal; line-height: 1.8; color: var(--white); margin-bottom: 20px;">
                     "<strong style="color: var(--white);">Kasia is my secret weapon.</strong> She rewired the part of me that kept hitting the ceiling, no matter how 'smart' my plan was.<br><br>I don't work hard anymore. Clients come to me, <strong style="color: var(--white);">7- and 8-figure leaders</strong> are showing up in my DMs, and I'm being invited into the <strong style="color: var(--white);">dream rooms</strong> I used to admire from afar.<br><br>The work we did has taken me from <strong style="color: var(--white);">$3k to $50-$200k clients</strong>, and I keep growing.<br><br>None of this happened because I changed my strategy.<br><strong style="color: var(--white);">It happened because I changed ME</strong>, and I couldn't have done it without Kasia."
@@ -1134,15 +1303,28 @@
     <div class="section-white">
         <div class="container">
             <div class="price-box" style="padding: 40px;">
-                <div class="price-amount">Just $888</div>
-                <div class="price-note" style="margin-top: 6px; margin-bottom: 24px;">Going up to $997 soon!</div>
+                
+                <!-- ============================================ -->
+                <!-- BIRTHDAY PRICE DISPLAY                       -->
+                <!-- REMOVE THIS DIV + RESTORE $997 BELOW         -->
+                <!-- ============================================ -->
+                <div class="price-strikethrough">$997</div>
+                <div class="price-birthday">$480</div>
+                <p style="font-size: 18px; font-weight: 700; color: #7b1b18; margin-bottom: 8px; line-height: 1.4;">
+                    🎂 Use code <span style="background: #e2a714; color: #000; padding: 3px 10px; border-radius: 4px; font-weight: 800; letter-spacing: 1px;">KASIA48</span> at checkout
+                </p>
+                <p style="font-size: 16px; font-style: italic; color: #524a3b; margin-bottom: 24px;">to get it for $480 before this 48-hour birthday offer goes away</p>
+                <!-- ============================================ -->
+                <!-- END BIRTHDAY PRICE DISPLAY                   -->
+                <!-- AFTER OFFER, REPLACE EVERYTHING ABOVE WITH:  -->
+                <!-- <div class="price-amount">$997</div>          -->
+                <!-- ============================================ -->
                 
                 <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button" style="margin: 0;">CLICK HERE TO JUMP IN</a>
                 
                 <p class="cta-subtext" style="margin-top: 24px; margin-bottom: 0; font-size: 18px;">Get the full framework that my clients use to hit $20K - $60K months<br>and skyrocket their businesses in the shortest amount of time.</p>
             </div>
             
-            <!-- INVESTMENT CONTEXT -->
             <div style="text-align: center; margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
                 <p style="font-size: 20px; line-height: 1.7; margin-bottom: 16px;"><strong style="color: #7b1b18 !important;">You already know this is your next level.</strong></p>
                 <p style="font-size: 18px; line-height: 1.8; margin-bottom: 16px;">One $15K client pays this back 17x.<br>Reaching $30K months changes your life forever (and it only gets better from there).</p>
@@ -1183,7 +1365,6 @@
                 <p>If that's you, email me at <a href="/cdn-cgi/l/email-protection#671412171708151327130f020e030209130e131e0a06000e040e06094904080a" style="color: var(--red);"><span class="__cf_email__" data-cfemail="74070104041b060034001c111d10111a001d000d1915131d171d151a5a171b19">[email&#160;protected]</span></a> with the subject line <strong>"Next-Level Ready"</strong> and we'll talk about whether this is your next move.</p>
             </div>
             
-            <!-- CTA BEFORE FAQ -->
             <div class="cta-wrapper" style="margin-top: 40px;">
                 <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button">READY TO STOP CIRCLING? LET'S GO!</a>
             </div>
@@ -1270,16 +1451,15 @@
                 </div>
             </div>
             
-            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script>
                 function toggleFaq(btn) {
                     const answer = btn.nextElementSibling;
                     const isOpen = answer.classList.contains('open');
                     
-                    // Close all other FAQs
                     document.querySelectorAll('.faq-answer-accordion').forEach(a => a.classList.remove('open'));
                     document.querySelectorAll('.faq-question-btn').forEach(b => b.classList.remove('active'));
                     
-                    // Toggle current one
                     if (!isOpen) {
                         answer.classList.add('open');
                         btn.classList.add('active');
@@ -1297,4 +1477,10 @@
                 
                 <p class="medium-text" style="margin-bottom: 24px;">Now it's time to take personal responsibility for making it happen.</p>
                 
-                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button" style="margin: 0;">I AM READY!
+                <a href="https://www.kasiarutkowiak.com/nlft-guided-payment" class="cta-button" style="margin: 0;">I AM READY!</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
